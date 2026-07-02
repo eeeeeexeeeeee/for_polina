@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Полина ♥</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sky" aria-hidden="true"></div>
+  <div class="fog fog-back" aria-hidden="true"></div>
+  <div class="fog fog-mid" aria-hidden="true"></div>
+  <div class="fog fog-front" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <main class="stage">
+    <section class="hero" id="hero">
+      <div class="hint" aria-hidden="true">
+        <span>click</span>
+        <span>on the</span>
+        <span>star</span>
+        <svg viewBox="0 0 90 80" class="arrow" aria-hidden="true">
+          <path d="M72 14 C50 20, 42 38, 39 56" />
+          <path d="M28 46 L39 58 L49 43" />
+        </svg>
+      </div>
+
+      <button class="envelope-button" id="openButton" aria-label="Открыть письмо">
+        <svg class="envelope-svg" viewBox="0 0 560 360" role="img" aria-label="White envelope with chrome star sticker">
+          <defs>
+            <filter id="paperNoise">
+              <feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="4" seed="7" result="noise" />
+              <feColorMatrix in="noise" type="saturate" values="0" />
+              <feComponentTransfer>
+                <feFuncA type="table" tableValues="0 0.07" />
+              </feComponentTransfer>
+              <feBlend in="SourceGraphic" mode="multiply" />
+            </filter>
+
+            <filter id="softShadow" x="-25%" y="-25%" width="150%" height="160%">
+              <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0b1020" flood-opacity="0.28" />
+              <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#ffffff" flood-opacity="0.28" />
+            </filter>
+
+            <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#fffdf6" />
+              <stop offset="0.55" stop-color="#efe8dc" />
+              <stop offset="1" stop-color="#fffaf0" />
+            </linearGradient>
+
+            <linearGradient id="paperDim" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#faf5eb" />
+              <stop offset="1" stop-color="#d7cabc" />
+            </linearGradient>
+
+            <radialGradient id="chrome" cx="42%" cy="28%" r="72%">
+              <stop offset="0" stop-color="#ffffff" />
+              <stop offset="0.17" stop-color="#f5f7f8" />
+              <stop offset="0.35" stop-color="#9da2a8" />
+              <stop offset="0.48" stop-color="#ffffff" />
+              <stop offset="0.67" stop-color="#7d828b" />
+              <stop offset="0.83" stop-color="#f6f7f8" />
+              <stop offset="1" stop-color="#626a74" />
+            </radialGradient>
+
+            <filter id="chromeShadow" x="-35%" y="-35%" width="170%" height="170%">
+              <feDropShadow dx="0" dy="7" stdDeviation="5" flood-color="#0b1020" flood-opacity="0.32" />
+              <feDropShadow dx="-2" dy="-2" stdDeviation="1" flood-color="#ffffff" flood-opacity="0.65" />
+            </filter>
+          </defs>
+
+          <g filter="url(#softShadow)">
+            <path class="env-back" d="M47 86 Q47 65 68 65 H492 Q513 65 513 86 V297 Q513 318 492 318 H68 Q47 318 47 297 Z" />
+            <path class="env-side-left" d="M48 92 L280 213 L48 316 Z" />
+            <path class="env-side-right" d="M512 92 L280 213 L512 316 Z" />
+            <path class="env-bottom" d="M49 316 L224 181 Q280 230 336 181 L511 316 Z" />
+            <path class="env-flap" d="M50 82 Q50 65 68 65 H492 Q510 65 510 82 L333 213 Q280 251 227 213 Z" />
+            <path class="crease" d="M56 88 L278 214 L504 88" />
+            <path class="crease light" d="M65 308 L223 181" />
+            <path class="crease light" d="M495 308 L337 181" />
+          </g>
+
+          <g class="star-wrap" filter="url(#chromeShadow)">
+            <path class="star-hit" d="M280 171 L296 205 L334 209 L306 234 L314 272 L280 252 L246 272 L254 234 L226 209 L264 205 Z" />
+            <path class="star" d="M280 171 L296 205 L334 209 L306 234 L314 272 L280 252 L246 272 L254 234 L226 209 L264 205 Z" />
+            <path class="star-line" d="M280 181 L291 209 L322 213 L299 232 L306 262 L280 246 L254 262 L261 232 L238 213 L269 209 Z" />
+            <path class="shine" d="M271 188 C292 203 293 224 281 244 C301 224 304 205 291 190 Z" />
+          </g>
+        </svg>
+      </button>
+    </section>
+
+    <section class="letter-section" id="letterSection" aria-live="polite">
+      <article class="letter" id="letter">
+        <p>Привет Полиночка!</p>
+
+        <p>Поздравляю тебя с днём рождения ♥️ Желаю тебе оставаться такой же веселой, целеустремленной и красивой как внешне, так и душой &lt;3</p>
+
+        <p>Хочу чтоб у тебя все в жизни получилось именно так, как ты задумала. Помни что все что с нами случается это либо к лучшему, либо урок который в итоге все равно приводит нас к лучшей версии себя. Пусть у тебя все будет хорошо, спокойно и гармонично ведь ты заслуживаешь самого лучшего.</p>
+
+        <p>Я немного поразмышляла после твоего рилса про наши экспедиции в детстве и поняла, что мы очень давно не проводили вместе время как тогда. А именно с любопытством к окружающему миру, особенно природе. И у меня возникла идея.</p>
+
+        <p>В этом году, на твое 25ти летиё я хочу тебе подарить путешествие в «старые добрые» но только а новом месте и в самом настоящем формате экспедиции.</p>
+
+        <p>Ночевка на «необитаемом острове» (он, если что, вполне себе обитаем просто так звучит круче хихи).</p>
+
+        <p>Идея такая: мы с тобой едем на остров Langøyene, разбиваем лагерь, купаемся в тёплых норвежских фьордах, исследуем весь остров, жарим овощи на гриле, празднуем твой день рождение и нашу долголетию дружбу и ночуем в гамаках (весь снаряд х2 у меня имеется). Утром мы просыпемся с рассветом, делаем йогу (классика), умываемся в солёном фьорде и наслаждаемся этим беззаботным летом также как делали это в детстве. А на следующий день я предлагаю пойти на хайк или если настроение поленится то лежать на пряже хоть вест день.</p>
+
+        <p>Кэмпинг на острове абсолютно бесплатный а билеты на самолет в Осло - подарок от меня. ☀️</p>
+
+        <p>Так что соглашайся и давай вместе решать когда воплотим эту маленькую экспедицию в реальность. Мне кажется это будет одно из тех воспоминаний что останется с нами на всю жизнь &lt;3</p>
+      </article>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
