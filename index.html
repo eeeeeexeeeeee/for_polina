@@ -16,22 +16,26 @@
     <img class="fog-img fog-img-3" src="fog3.png" alt="" aria-hidden="true" />
     <img class="fog-img fog-img-4" src="fog4.png" alt="" aria-hidden="true" />
 
-    <section class="hero" aria-label="Открытка">
-      <div class="instruction" aria-hidden="true">
-        <span>click</span>
-        <span>on the</span>
-        <span>star</span>
-        <svg viewBox="0 0 70 70" class="arrow">
-          <path d="M50 6 C36 18 28 28 28 47" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-          <path d="M18 39 L28 50 L41 42" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
+    <div class="reading-fog reading-fog-a" aria-hidden="true"></div>
+    <div class="reading-fog reading-fog-b" aria-hidden="true"></div>
+    <div class="reading-fog reading-fog-c" aria-hidden="true"></div>
 
+    <section class="hero" aria-label="Открытка">
       <div class="envelope-wrap" id="envelopeWrap">
         <img class="envelope" src="envelope.png" alt="Closed envelope" />
-        <button class="star-button" id="openButton" type="button" aria-label="Open the birthday letter">
+        <button class="star-button" id="openButton" type="button" aria-label="Open the birthday letter" aria-expanded="false">
           <img src="star.png" alt="" />
         </button>
+
+        <div class="instruction" aria-hidden="true">
+          <span>press</span>
+          <span>on the</span>
+          <span>star</span>
+          <svg viewBox="0 0 90 58" class="arrow" aria-hidden="true">
+            <path d="M84 6 C62 10 38 25 17 46" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+            <path d="M18 32 L15 48 L31 45" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
       </div>
     </section>
 
